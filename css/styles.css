@@ -1,5 +1,32 @@
+/*---Base-Style---*/
+
+/* Universal Selector */
+* {
+	box-sizing: border-box;
+} 
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    color: #595959;
+    font-size: 1em;
+    padding: 0;
+    margin: 0 auto;
+	max-width:2800px;
+}
+
+.dash_alert {
+    display: flex;
+    flex-direction: column;
+    padding: 0 25px;
+}
+
+header {
+    background-color: #7477bf;
+}
+
 /*---Creating Grid---*/
 .grid_container {
+    height: 100vh;
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto;
@@ -8,18 +35,87 @@
         "navigation"
         "main";
 }
+
+/*---Header Layout Style--*/
 .header {
     grid-area:header;
+    background-color: #7477bf;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0 10px;
 }
-.navigation {
-    grid-area:navigation;
+.header span { /*The little green notification next to the bell*/
+    color: greenyellow;
+    font-size: 3rem;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    border-radius: 50%;
 }
+.bell_icon {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.bell_notification { /*icon symbol of bell*/
+    width: 30px;
+    height: auto;
+    margin-right: 10px; 
+}
+
+.header img { /*Profile Image*/
+    border-radius: 50%;
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.header h1 { /*--YOURApp text*/
+    color: white;
+    font-size: 1em;
+    margin-right: 120px;
+}
+
+.header h3 {
+    color: white;
+    font-size: 0.5em;
+}
+
+
+/*---Navigation Layout Style---*/
+
+.navigation{ /*Navigation Bar*/
+    grid-area: navigation;
+    background-color: #4d4c72;
+    display: flex;
+    justify-content: center; /*align icon center*/
+}
+
+.navigation a{ /*Navigation Icons*/
+    width: 35px;
+    height: auto;
+    margin: 10px; /*spacing between icons*/
+    border-bottom: 5px solid #4d4c72;
+    
+}
+
+.navigation a:hover{ /*Nav Icons on Hover*/
+    border-bottom: 3px solid lightgreen;
+}
+
+
+/*---Main Container Layout Style---*/
 .main_container {
     grid-area:main;
     display: grid;
 }
 
-/*Layout of Graphs*/
+/*---Layout of Graphs---*/
 .widget_container_full,
 .widget_container_half {
     width: 95vw;
@@ -33,6 +129,7 @@
             "header header"
             "navigation main";
     }
+
     .main_container {
         grid-template-columns: 50%;
     }

@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard WebApp</title>
+    <title>Dashboard WebApp</title>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -44,10 +45,10 @@
 
     </div>
     
-    <nav class="side_dashboard">
+    <nav class="navigation">
         
         <!--Side Icon Dashboard-->
-        <svg class="side-icon1" version="1.1" id="Line_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        <svg class="side_dashboard" version="1.1" id="Line_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
             <style type="text/css">
                 .st0{fill:#fff;}
@@ -66,7 +67,7 @@
         </svg>   
         
         <!--Side Icon Visits-->
-        <svg class="side-icon2" version="1.1" id="Line_12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        <svg class="side_visits" version="1.1" id="Line_12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
             <style type="text/css">
                 .st0{fill:#fff;}
@@ -83,7 +84,7 @@
         </svg>
 
         <!--Side Icon Members-->
-        <svg class="side-icon3" version="1.1" id="Line_5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        <svg class="side_members" version="1.1" id="Line_5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
             <style type="text/css">
                 .st0{fill:#fff;}
@@ -102,7 +103,7 @@
         </svg>
 
         <!--Side Icon Settings-->
-        <svg class="side-icon4" version="1.1" id="Line_6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        <svg class="side_settings" version="1.1" id="Line_6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
             <style type="text/css">
                 .st0{fill:orange;}
@@ -124,64 +125,75 @@
 
     </nav>
 
-    <main class="main_widgets_container">
+    <main class="main_container">
 
         <!--Section 1/ Dashboard & Alert-->
-        <section id="section-1">
+        <section class="dash_alert">
 
             <!--Dashboard-->
             <div class="dashboard_header">
                 <h2 class="headlining">Dashboard</h2>
-                <search bar></search>
+                <div class="dash_header_search">
+                    <input type="search" placeholder="Search..." />
+                </div>
             </div>
 
             <!--Alert-->
             <div class="alert" id="alert">
+                <!--JS WILL INSERT HERE!-->
             </div>
         </section>  
 
-        <!--Section 2/ Traffic Charts-->
-        <section id="section-2">
+        <!--Section 2/ Traffic Charts (line graph chart)-->
+        <section class="traffic">
             <div class="traffic_header">
             <h3>TRAFFIC</h3>
                 <ul class="traffic_nav">
-                    <li>Hourly</li>
-                    <li>Daily</li>
-                    <li>Weekly</li>
-                    <li>Monthly</li>
+                    <li class="traffic-nav-link">Hourly</li>
+                    <li class="traffic-nav-link">Daily</li>
+                    <li class="traffic-nav-link active">Weekly</li>
+                    <li class="traffic-nav-link">Monthly</li>
                 </ul>
             </div>
 
-            <canvas height= "80px" id="traffic_chart">
-            </canvas>
+            <div class="widget_container_full">
+                <canvas id="traffic_chart"></canvas>
+            </div>
 
         </section>
 
-        <!--Section 3/Daily Traffic & Mobile Users-->
-        <section id="section-3">
+        <!--Section 3/Daily Traffic-->
+        <section class="daily">
 
             <!--Daily Traffic Chart-->
             <div class="daily_traffic">
                 <h3>DAILY TRAFFIC</h3>
-                <canvas id="daily_chart">
-                </canvas>
+                <div class="widget_container_half">
+                    <canvas id="daily_chart"></canvas>
+                </div>
             </div>
+        </section>
+
+        <!--Section 4/ Mobile Users-->
+        <section class="mobile">
 
             <!--Mobile User Chart-->
             <div class="mobile_users">
                 <h3>MOBILE USERS</h3>
-                <canvas id="mobile_chart">
-                </canvas>
+                <div class="widget_container_half">
+                    <canvas id="mobile_chart"></canvas>
+                </div>
             </div>
 
         </section>
 
-        <!--Section 4/Social Stats-->
-        <section id="social_stats">
+        <!--Section 5/Social Stats-->
+        <section class="social">
+            
             <h3>SOCIAL STATS</h3>
 
             <!--Twitter Section-->
-            <div class="part_a">              
+            <div class="twitter_section">              
                 <svg class="twitter" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	                viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
                     <path fill="red" d="M32,3.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6C25.8,0.8,24,0,22.2,0
@@ -191,28 +203,28 @@
                         c0-0.3,0-0.6,0-0.8C30,5.6,31.1,4.4,32,3.1z"/>
                 </svg>
                 
-                <div>
+                <div class="social_text_twitter">
                     <h3><strong>Twitter</strong></h3>
                     <h4>10,345</h4>
                 </div>
             </div>
 
             <!--Facebook Section-->
-            <div class="part_b">
+            <div class="facebook_section">
                 <svg enable-background="new 0 0 56.693 56.693" height="56.693px" id="Layer_1" version="1.1" 
                     viewBox="0 0 56.693 56.693" width="56.693px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <path fill="green" d="M40.43,21.739h-7.645v-5.014c0-1.883,1.248-2.322,2.127-2.322c0.877,0,5.395,0,5.395,0V6.125l-7.43-0.029 
                     c-8.248,0-10.125,6.174-10.125,10.125v5.518h-4.77v8.53h4.77c0,10.947,0,24.137,0,24.137h10.033c0,0,0-13.32,0-24.137h6.77  L40.43,21.739z"/>
                 </svg>
 
-                <div>
+                <div class="social_text_facebook">
                     <h3><strong>Facebook</strong></h3>
                     <h4>8,739</h4>
                 </div>
             </div>
 
             <!--Google Section-->
-            <div class="part_c">
+            <div class="google_section">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	                viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
                     <path fill="blue" d="M17.7,25.7c0-0.3,0-0.5-0.1-0.8c-0.1-0.2-0.1-0.5-0.2-0.7c-0.1-0.2-0.2-0.4-0.3-0.7c-0.2-0.2-0.3-0.4-0.4-0.6
@@ -233,7 +245,7 @@
                         h-4.9v4.9h-2.5V7.4h-4.9V4.9h4.9V0h2.5v4.9H32.8z"/>
                 </svg>
 
-                <div>
+                <div class="social_text_google">
                     <h3><strong>Google+</strong></h3>
                     <h4>2,530</h4>
                 </div>
@@ -241,121 +253,132 @@
             </div>
         </section>
 
-        <!--Section 5/ New Members & Recent Activity-->
-        <section id="section-5">
+        <!--Section 6/ New Members-->
+        <section class="members">
 
             <!--New Members-->
             <div class="new_members">
                 <h3>NEW MEMBERS</h3>
-                <ul>
-                    <li>
-                        <img src and alt member 1>
-                        <div>
-                            <h4>member name</h4>
-                            <a>email</a>
-                        </div>
-                        <div>
-                            <p>Date</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src and alt member 2>
-                        <div>
-                            <h4>member name</h4>
-                            <a>email</a>
-                        </div>
-                        <div>
-                            <p>Date</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src and alt member 3>
-                        <div>
-                            <h4>member name</h4>
-                            <a>email</a>
-                        </div>
-                        <div>
-                            <p>Date</p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src and alt member 4>
-                        <div>
-                            <h4>member name</h4>
-                            <a>email</a>
-                        </div>
-                        <div>
-                            <p>Date</p>
-                        </div>
-                    </li>
-                </ul>
+
+                <div class="members_container_1">
+                    <img src="images/member-1.jpg" class="member-image">
+                    <div class="members_text">
+                        <p>Victoria Chambers</p>
+                        <a href="mailto:victoria.chambers80@example.com">victoria.chambers80@example.com</a>
+                    </div>
+                    <div>
+                        <p>10/15/15</p>
+                    </div>
+                </div>
+
+                <div class="members_container_2">
+                    <img src="images/member-2.jpg" class="member-image">
+                    <div class="members_text">
+                        <p>Dale Byrd</p>
+                        <a href="mailto:dale.byrd52@example.com">dale.byrd52@example.com</a>
+                    </div>
+                    <div>
+                        <p>10/15/15</p>
+                    </div>
+                </div>
+
+                <div class="members_container_3">
+                    <img src="images/member-3.jpg" class="member-image">
+                    <div class="members_text">
+                        <p>Dawn Wood</p>
+                        <a href="mailto:dawn.wood16@example.com">dawn.wood16@example.com</a>
+                    </div>
+                    <div>
+                        <p>10/15/15</p>
+                    </div>
+                </div>
+
+                <div class="members_container_4">
+                    <img src="images/member-4.jpg" class="member-image">
+                    <div class="members_text">
+                        <p>Dan Oliver</p>
+                        <a href="mailto:dan.oliver82@example.com">dan.oliver82@example.com</a>
+                    </div>
+                    <div>
+                        <p>10/15/15</p>
+                    </div>
+                </div>   
             </div>
+
+        </section>
+
+        <!--Section 7/ Recent Activity-->
+        <section class="activity">
 
             <!--Recent Activity-->
             <div class="recent_activity">
                 <h3>RECENT ACTIVITY</h3>
-                <ul>
-                    <li>
-                        <img src and alt member 1>
-                        <div>
-                            <h4>text</h4>
-                            <p>text</p>
-                        </div>
-                        <div>
-                            <p class="activity_arrow">></p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src and alt member 2>
-                        <div>
-                            <h4>text</h4>
-                            <p>text</p>
-                        </div>
-                        <div>
-                            <p class="activity_arrow">></p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src and alt member 3>
-                        <div>
-                            <h4>text</h4>
-                            <p>text</p>
-                        </div>
-                        <div>
-                            <p class="activity_arrow">></p>
-                        </div>
-                    </li>
-                    <li>
-                        <img src and alt member 4>
-                        <div>
-                            <h4>text</h4>
-                            <p>text</p>
-                        </div>
-                        <div>
-                            <p class="activity_arrow">></p>
-                        </div>
-                    </li>
-                </ul>
+
+                <div class="activity_container_1">
+                    <img src="images/member-1.jpg" class="member-image">
+                    <div class="members_text">
+                        <p>Victoria Chambers commented on YOURApp's SEO Tips</p>
+                        <p>4 hours ago</p>
+                    </div>
+                    <div>
+                        <p class="activity_arrow">></p>
+                    </div>
+                </div>
+
+                <div class="activity_container_2">
+                    <img src="images/member-2.jpg" class="member-image">
+                    <div class="members_text">
+                        <p>Dale Byrd like thge post Facebook's Changes for 2016</p>
+                        <p>5 hours ago</p>
+                    </div>
+                    <div>
+                        <p class="activity_arrow">></p>
+                    </div>
+                </div>
+
+                <div class="activity_container_3">
+                    <img src="images/member-3.jpg" class="member-image">
+                    <div class="members_text">
+                        <p>Dawn Wood commented on Facebook's Changes for 2016</p>
+                        <p>5 hours ago</p>
+                    </div>
+                    <div>
+                        <p class="activity_arrow">></p>
+                    </div>
+                </div>
+
+                <div class="activity_container_4">
+                    <img src="images/member-4.jpg" class="member-image">
+                    <div class="members_text">
+                        <p>Dan Oliver posted YOURApp's SEO Tips</p>
+                        <p>1 Day Ago</p>
+                    </div>
+                    <div>
+                        <p class="activity_arrow">></p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!--Section 6/ Message User & Settings-->
-        <section class="section-6">
-
-            <!--Message User-->
+        <!--Section 8/ Message User--->
+        <section class="message">
+        <!--Message User-->
             <div class="message_user">
                 <h3>MESSAGE USER</h3>
                 <form class="widget_container">
-                    <input type="text" id="user" placeholder="Search for User">
-                    <textarea id="message" placeholder="Message for User"></textarea>
+                    <input type="text" id="user" placeholder="Search for user" class="form_field" id="userField">
+                    <textarea placeholder="Message for User" class="form-area" id="messageField"></textarea>
 
-                    <button type="submit" class="send_button">SEND</button>
+                    <button type="submit" class="send_button" id="send">SEND</button>
                 </form>
-
             </div>
 
-            <!--Settings-->
-            <div class="settings">
+        </section>
+
+        <!--Section 9/ Settings--->
+        <section class="settings">
+             <!--Settings-->
+            <div class="settings_container">
                 <h3>SETTINGS</h3>
                     <h4>Send Email Notifications</h4>
                     <h4>Set Profile to Public</h4>
@@ -394,8 +417,9 @@
 
     </main>
     
-    <script></script>
-    <script></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/charts/"></script>
 
 </body>
 </html>

@@ -11,7 +11,6 @@ body {
     font-size: 1em;
     padding: 0;
     margin: 0 auto;
-	max-width:2800px;
 }
 
 .dash_alert {
@@ -89,22 +88,31 @@ header {
 
 /*---Navigation Layout Style---*/
 
-.navigation{ /*Navigation Bar*/
+.navigation { /*Navigation Bar*/
     grid-area: navigation;
-    background-color: #4d4c72;
-    display: flex;
-    justify-content: center; /*align icon center*/
+    background: #4d4c72;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 4rem;
+    z-index: 2;
+    text-align: center;
 }
 
-.navigation a{ /*Navigation Icons*/
+.navigation img {
+    width: 100%;
+    text-align: center;
+}
+
+.navigation a { /*Navigation Icons*/
     width: 35px;
     height: auto;
-    margin: 10px; /*spacing between icons*/
-    border-bottom: 5px solid #4d4c72;
-    
+    margin-left: 15px;
+    margin-top: 15px;
+    border-bottom: 2px solid #4d4c72;
 }
 
-.navigation a:hover{ /*Nav Icons on Hover*/
+.navigation a:hover { /*Nav Icons on Hover*/
     border-bottom: 3px solid lightgreen;
 }
 
@@ -132,6 +140,27 @@ header {
 
     .main_container {
         grid-template-columns: 50%;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: column;   
+    }
+
+    .navigation a {
+        margin-left: 10px;
+    }
+
+    .navigation img{
+        width: 60%;
+        margin-left:0px;  
+    }
+
+    .navigation a:hover { /*Nav Icons on Hover*/
+        padding: 5px;
+        border-left: 2px solid lightgreen;
+        border-bottom: none;
+        fill: white;
     }
 
     .traffic, 

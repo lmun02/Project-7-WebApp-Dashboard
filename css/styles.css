@@ -1,9 +1,9 @@
-/*---Base-Style---*/
+/*=========Base-Style============*/
 
-/* Universal Selector */
-* {
+* { /* Universal Selector */
 	box-sizing: border-box;
 } 
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #fff;
@@ -23,7 +23,8 @@ header {
     background-color: #7477bf;
 }
 
-/*---Creating Grid---*/
+
+/*============Creating Grid==========*/
 .grid_container {
     height: 100vh;
     display: grid;
@@ -35,7 +36,8 @@ header {
         "main";
 }
 
-/*---Header Layout Style--*/
+
+/*=========Header Layout Style===========*/
 .header {
     grid-area:header;
     background-color: #7477bf;
@@ -47,7 +49,7 @@ header {
     margin: 0;
     padding: 0 10px;
 }
-.header span { /*The little green notification next to the bell*/
+.header span { /*green notification by bell*/
     color: greenyellow;
     font-size: 3rem;
     position: absolute;
@@ -61,20 +63,20 @@ header {
     position: relative;
 }
 
-.bell_notification { /*icon symbol of bell*/
+.bell_notification { /*bell icon*/
     width: 30px;
     height: auto;
     margin-right: 10px; 
 }
 
-.header img { /*Profile Image*/
+.header img { /*profile image*/
     border-radius: 50%;
     width: 30px;
     height: auto;
     margin-right: 10px;
 }
 
-.header h1 { /*--YOURApp text*/
+.header h1 { /*YOURApp text*/
     color: white;
     font-size: 1em;
     margin-right: 120px;
@@ -86,9 +88,9 @@ header {
 }
 
 
-/*---Navigation Layout Style---*/
+/*=======Navigation Layout Style===========*/
 
-.navigation { /*Navigation Bar*/
+.navigation { /*navigation bar*/
     grid-area: navigation;
     background: #4d4c72;
     width: 100%;
@@ -104,7 +106,7 @@ header {
     text-align: center;
 }
 
-.navigation a { /*Navigation Icons*/
+.navigation a { /*navigation icons*/
     width: 35px;
     height: auto;
     margin-left: 15px;
@@ -112,24 +114,257 @@ header {
     border-bottom: 2px solid #4d4c72;
 }
 
-.navigation a:hover { /*Nav Icons on Hover*/
+.navigation a:hover { /*nav icons on hover*/
     border-bottom: 3px solid lightgreen;
 }
 
 
-/*---Main Container Layout Style---*/
+/*============Main Container Layout Style================*/
 .main_container {
     grid-area:main;
-    display: grid;
+    display: block;
+    width: 100%;
 }
 
-/*---Layout of Graphs---*/
+.dash_alert {
+    padding: 0;
+}
+
+.dashboard_header { /*dashboard div*/
+    background-color: #fbfbfb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashboard_header h2 { /*dashboard heading*/
+    margin: auto;
+    padding-top: 15px;  
+}
+
+.searchbar {
+   margin: auto;
+   margin-top: 15px;
+   margin-bottom: 15px; 
+   color: #888888;
+   padding: 5px;
+   width: 200px;
+   border-radius: 5px;
+}
+
+
+/*====Alert=====*/
+.alert-banner { /*JS alert*/
+    margin: 0 15px;
+    margin-top: 10px;
+    padding: 0 20px;
+    background-color: #7477bf;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.alert-banner-close {
+    margin: 0 auto;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    
+}
+
+.alert-banner-close:hover {
+    color: #4d4c72;
+}
+
+
+/*==============Traffic===================*/
+
+.traffic_header h3 { /*traffic heading*/
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+
+.traffic_nav { /*traffic ul*/
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    font-weight: bolder;
+}
+
+.traffic_nav li { /*traffic links*/
+    margin: 0 5px 10px;
+}
+
+.traffic_nav li:hover { /*traffic links on hover*/
+    background-color:lightgreen;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+
+/*=============Daily Traffic & Mobile Users================*/
+
+.daily_traffic h3 {
+    margin-left: 15px;
+}
+
+.mobile_users h3 {
+    margin-left: 15px;
+}
+
+
+/*=============Social Stats Section==================*/
+
+.social h3 { /*social stats heading*/
+    margin-left: 15px;
+}
+
+.twitter_section,
+.facebook_section,
+.google_section { /*social stats containers*/
+    background-color: #fbfbfb;
+    border: 1px solid #b9b9b9;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.twitter-img,
+.facebook-img,
+.google-img { /*social stats images*/
+    padding: 25px;
+    width: 30%;
+}
+
+.twitter-bg,
+.facebook-bg,
+.google-bg { /*social stats circle*/
+    fill: #7377BF;
+}
+
+.twitter-bg:hover,
+.facebook-bg:hover,
+.google-bg:hover { /*social stats circl hover*/
+    fill: #4d4c72;
+}
+
+.twitter-icon,
+.facebook-icon,
+.google-icon { /*social stats path*/
+    fill: white;
+}
+
+.social_text_twitter,
+.social_text_facebook,
+.social_text_google { /*social stats text*/
+    text-align: center;
+}
+
+#twitter-bold,
+#facebook-bold,
+#google-bold { /*social stats text*/
+    color: #7377BF;
+    font-weight: bolder;
+    font-size: 1em;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+}
+
+#twitter-number,
+#facebook-number,
+#google-number { /*social stats number*/
+    font-size: 4em;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+/*=============New Members Section==================*/
+.hr2,
+.hr3 { /*line created between new members and activities*/
+    border-bottom: 1px #b9b9b9 solid;
+    transform: scaleY(0.5);
+    width: 90%;
+    margin: 25px auto;
+}
+
+.new_members h3{ /*new members headline*/
+    margin-left: 15px;
+}
+
+.members_container_1,
+.members_container_2,
+.members_container_3,
+.members_container_4 { /*members container*/
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 90%;
+    align-items: center;
+}
+
+.members_container_1 img,
+.members_container_2 img,
+.members_container_3 img,
+.members_container_4 img { /*members images*/
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.members_text { /*members text*/
+    margin: 0 auto;
+    padding: 0;
+}
+
+.members_text p {
+    margin: auto;
+}
+
+
+/*=============Recent Activity Section==================*/
+
+.activity h3 { /*activity headline*/
+    margin-left: 15px;
+}
+
+
+/*=============Message User==================*/
+
+.message h3 { /*message headline*/
+    margin-left: 15px;
+}
+
+
+/*=============Settings==================*/
+
+.settings h3 { /*settings headline*/
+    margin-left: 15px;
+}
+
+
+/*============Layout of Graphs=============*/
 .widget_container_full,
 .widget_container_half {
     width: 95vw;
 }
 
-/*---Media Queries---*/
+
+/*============Media Queries=================*/
 @media (min-width:768px){
     .grid_container {
         grid-template-columns: 55px 1fr;
@@ -161,6 +396,26 @@ header {
         border-left: 2px solid lightgreen;
         border-bottom: none;
         fill: white;
+    }
+
+    .dashboard_header {
+        flex-direction: row;
+        height: 50px;
+        width: 100%;
+    }
+
+    .dashboard_header h2 {
+        margin-left: 15px;
+        padding-top: 0;
+    }
+
+    .searchbar {
+        margin-right: 15px;
+    }
+
+    .searchbar input {
+        margin-top: 10px;
+        margin-bottom: 0px;
     }
 
     .traffic, 

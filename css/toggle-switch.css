@@ -240,7 +240,7 @@
   .switch-light.switch-candy span span,
   .switch-light.switch-candy input:checked ~ span span:first-child,
   .switch-toggle.switch-candy label {
-    color: darkorange;
+    color: #fff;
     font-weight: bold;
     text-align: center;
     text-shadow: 1px 1px 1px #191b1e; }
@@ -488,8 +488,6 @@
   from {
     -webkit-transform: translate3d(0, 0, 0); }
   to {
-    -webkit-transform: translate3d(0, 0, 0); 
-    } 
-}
+    -webkit-transform: translate3d(0, 0, 0); } }
 
 /*# sourceMappingURL=toggle-switch.css.map */

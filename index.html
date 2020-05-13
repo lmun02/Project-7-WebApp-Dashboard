@@ -18,7 +18,7 @@
         <h1><strong>YOUR</strong>App</h1>
         <div class="bell_icon"> 
             <div class="bell_notification">
-                <img src="icons/icon-bell.svg" alt="bell icon">
+                <img src="icons/icon-bell.svg" alt="bell icon" class="bell">
             </div>
             <div class="profile" id="notifications"></div>
 
@@ -55,13 +55,14 @@
         </section>  
 
         <!--Section 2/ Traffic Charts (line graph chart)-->
+        <div class="full-size-chart">
         <section class="traffic">
             <div class="traffic_header">
             <h3>TRAFFIC</h3>
                 <ul class="traffic_nav">
                     <li class="traffic-nav-link">Hourly</li>
                     <li class="traffic-nav-link">Daily</li>
-                    <li class="traffic-nav-link active">Weekly</li>
+                    <li class="traffic-nav-link">Weekly</li>
                     <li class="traffic-nav-link">Monthly</li>
                 </ul>
             </div>
@@ -72,8 +73,10 @@
             </div>
 
         </section>
+        </div>
 
         <!--Section 3/Daily Traffic-->
+        <div class="half-size-charts">
         <section class="daily">
 
             <!--Daily Traffic Chart/Bar Graph-->
@@ -99,12 +102,12 @@
             </div>
 
         </section>
+        </div>
 
         <!--Section 5/Social Stats-->
-        <section class="social">
-            
+        <div class="social-info">
             <h3>SOCIAL STATS</h3>
-
+        <section class="social">
             <!--Twitter Section-->
             <div class="twitter_section"> 
                 <div class="twitter-img">             
@@ -128,8 +131,8 @@
             <!--Facebook Section-->
             <div class="facebook_section">
                 <div class="facebook-img">
-                    <svg enable-background="new 0 0 56.693 56.693" height="56.693px" id="Layer_1" version="1.1" 
-                        viewBox="0 0 56.693 56.693" width="56.693px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <svg class="facebook" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
                     <circle class="facebook-bg" cx="16" cy="16" r="16"/>
                     <path class="facebook-icon" d="M40.43,21.739h-7.645v-5.014c0-1.883,1.248-2.322,2.127-2.322c0.877,0,5.395,0,5.395,0V6.125l-7.43-0.029 
                         c-8.248,0-10.125,6.174-10.125,10.125v5.518h-4.77v8.53h4.77c0,10.947,0,24.137,0,24.137h10.033c0,0,0-13.32,0-24.137h6.77  L40.43,21.739z"/>
@@ -145,7 +148,7 @@
             <!--Google Section-->
             <div class="google_section">
                 <div class="google-img">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    <svg class="google" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
                     <circle class="google-bg" cx="16" cy="16" r="16"/>
                     <path class="google-icon" d="M17.7,25.7c0-0.3,0-0.5-0.1-0.8c-0.1-0.2-0.1-0.5-0.2-0.7c-0.1-0.2-0.2-0.4-0.3-0.7c-0.2-0.2-0.3-0.4-0.4-0.6
@@ -174,8 +177,10 @@
 
             </div>
         </section>
+        </div>
 
         <!--Section 6/ New Members-->
+        <div class="member-info">
         <section class="members">
 
             <!--New Members-->
@@ -266,8 +271,10 @@
                 
             </div>
         </section>
+        </div>
 
         <!--Section 8/ Message User--->
+        <div class="message-setting-info">
         <section class="message">
         <!--Message User-->
             <div class="message_user">
@@ -283,29 +290,23 @@
         </section>
 
         <!--Section 9/ Settings--->
-        <section class="settings">
-             <!--Settings-->
-            <div class="settings_container">
-                <h3>SETTINGS</h3>
-                <div class="settings_text">
-                    <h4>Send Email Notifications</h4>
-                    <h4>Set Profile to Public</h4>
-                </div>
-                <div class="setting_button">
-                    <div>
-                        <label class="switch">
-                            <input for="#" type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-                    <div>
-                        <label class="switch">
-                            <input for="#" type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-                </div>
+        <section class="settings" id="settings">
+            <h3>SETTINGS</h3>
+            
+            <div class="settings_switches">
+                <label class="switch">
+                        <input class="checkbox_switch" type="checkbox" checked>
+                        <div class="toggle-switch"></div>
+                        <span class="notifications_label">Send Email Notifications</span>
+                </label>
 
+                <label class="switch">
+                    <input class="checkbox_switch" type="checkbox">
+                    <div class="toggle-switch"></div>
+                    <span class="public_label">Set Profile to Public</span>
+                </label>
+            </div>
+     
                 <!--TimeZone-->
                 <div class="timezone_settings">
                     <select class="timezone" id="state">
@@ -320,12 +321,12 @@
                     <button class="primary_button">SAVE</button>
                     <button class="disable_button">CANCEL</button>
                 </div>
-
-            </div>
+            
         </section>
-
+        </div>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
     <script src="js/script.js"></script>
 
 </body>

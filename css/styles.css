@@ -73,6 +73,10 @@ header {
     margin-right: 10px; 
 }
 
+.bell img:hover {
+    fill: white;
+}
+
 .header img { /*profile image*/
     border-radius: 50%;
     width: 30px;
@@ -171,14 +175,14 @@ header {
 }
 
 .alert-banner-close { /*alert close*/
-    margin: 0 auto;
+    display: flex;
+    justify-self: flex-end;
     color: white;
     font-weight: bold;
     font-size: 20px;
     line-height: 20px;
     cursor: pointer;
-    transition: 0.3s;
-    
+    transition: 0.5s;   
 }
 
 .alert-banner-close:hover {
@@ -194,21 +198,22 @@ header {
 
 .traffic_header h3 { /*traffic heading*/
     margin-left: 15px;
-    margin-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .traffic_nav { /*traffic ul*/
     margin: 0;
-    padding: 0;
+    padding-right: 10px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     list-style: none;
     font-weight: bolder;
 }
 
-.traffic_nav li { /*traffic links*/
-    margin: 0 5px 10px;
+.traffic-nav-link {
+    padding-bottom: 10px;
+    padding-right: 15px;
 }
 
 .traffic_nav li:hover { /*traffic links on hover*/
@@ -228,16 +233,23 @@ header {
 
 .daily_traffic h3 { /*daily traffic heading*/
     margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 
 /*=============Mobile Users================*/
 
+.mobile_users {
+    padding-bottom: 20px;
+}
 .mobile { 
    border-bottom: solid 1px #dfdfdf;
 } 
 .mobile_users h3 { /*mobile users heading*/
     margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 
@@ -247,8 +259,10 @@ header {
     border-bottom: solid 1px #dfdfdf;
 }
 
-.social h3 { /*social stats heading*/
+.social-info h3 { /*social stats heading*/
     margin-left: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .twitter_section,
@@ -258,17 +272,16 @@ header {
     border: 1px solid #b9b9b9;
     border-radius: 5px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: row; 
     width: 90%;
     margin: auto;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .twitter-img,
 .facebook-img,
 .google-img { /*social stats images*/
-    padding: 25px;
+    padding: 15px;
     width: 30%;
 }
 
@@ -276,6 +289,7 @@ header {
 .facebook-bg,
 .google-bg { /*social stats circle*/
     fill: #7377BF;
+    
 }
 
 .twitter-bg:hover,
@@ -288,12 +302,14 @@ header {
 .facebook-icon,
 .google-icon { /*social stats path*/
     fill: white;
+    width: 40px;
 }
 
 .social_text_twitter,
 .social_text_facebook,
 .social_text_google { /*social stats text*/
     text-align: center;
+    padding-top: 10px;
 }
 
 #twitter-bold,
@@ -301,18 +317,17 @@ header {
 #google-bold { /*social stats text*/
     color: #7377BF;
     font-weight: bolder;
-    font-size: 1em;
-    margin: 0 auto;
-    padding: 0;
+    margin: 0 ;
+    padding: auto;
     text-align: left;
 }
 
 #twitter-number,
 #facebook-number,
 #google-number { /*social stats number*/
-    font-size: 4em;
-    margin: 0 auto;
-    padding: 0;
+    font-size: 3em;
+    margin: 0 ;
+    padding-right: 10px;
 }
 
 
@@ -323,12 +338,13 @@ header {
     display: flex;
     height: auto;
     flex-direction: column;
-    align-items: center;
     padding: 5px;
 }
 
 .new_members h3{ /*new members headline*/
     margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .members_container_1,
@@ -337,11 +353,11 @@ header {
 .members_container_4 { /*members container*/
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 10px;
+    padding: 5px;
+    margin-left:0;
+    margin-right: 0;
+    font-size: 10px;
     border-bottom: solid 1px #dfdfdf;
-    align-items: center;
-    font-size: 12px;
 }
 
 .members_container_1 img,
@@ -354,7 +370,8 @@ header {
 }
 
 .members_text { /*members text*/
-    margin: auto;
+    margin-left: 0;
+    margin-right: auto;
     padding: 5px;
 }
 
@@ -368,6 +385,8 @@ header {
 
 .activity h3 { /*activity headline*/
     margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .activity_container_1,
@@ -375,12 +394,11 @@ header {
 .activity_container_3,
 .activity_container_4 { /*activities containers*/
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px;
-    border-bottom: solid 1px #dfdfdf;
+    flex-direction: row;   
+    padding: 5px;
     align-items: center;
     font-size: 12px;
+    border-bottom: solid 1px #dfdfdf;
 }
 
 .activity_container_1 img,
@@ -393,7 +411,8 @@ header {
 }
 
 .activities_text { /*activity text*/
-    margin: auto;
+    margin-left: 0;
+    margin-right: auto;
     padding: 5px;
 }
 
@@ -407,6 +426,8 @@ header {
 
 .message h3 { /*message headline*/
     margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .widget_container { /*align container center*/
@@ -458,7 +479,9 @@ header {
 /*=============Settings==================*/
 
 .settings {
-    border-bottom: solid 1px #dfdfdf;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .settings h3 { /*settings headline*/
@@ -507,9 +530,88 @@ header {
     padding: 10px;   
 }
 
+label {
+    margin-bottom: 20px;
+}
 
+.switch { /*settings switch buttons & label*/
+    display: inline-block;
+    cursor: pointer;
+}
 
+.settings_switches { /*settings switch buttons*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
+.toggle-switch { /*setting switch button*/
+    display: inline-block;
+    background: #595959;
+    border-radius: 16px;
+    width: 70px;
+    height: 35px;
+    position: relative;
+    vertical-align: middle;
+    transition: 0.5s;
+    margin-left: 10px;
+}
+
+.toggle-switch:before,
+.toggle-switch:after { /*switch circle content*/
+    content: "";
+}
+
+.toggle-switch:before { /*switch circles button*/
+    display: block;
+    background: linear-gradient(to bottom, white 0%, white 100%);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    transition: left 0.5s;
+}
+
+.checkbox_switch:checked + .toggle-switch { /*switch box checked background*/
+    background: #7477bf;
+}
+
+.checkbox_switch:checked + .toggle-switch:before { /*length switch if checked*/
+    left: 40px;
+}
+
+.checkbox_switch { /*checkbox input*/
+    position: absolute;
+    visibility: hidden;
+}
+
+.notifications_label, 
+.public_label { /*settings text label*/
+    margin-left: 5px;
+    position: relative;
+    font-weight: bolder;
+    top: 2px;
+}
+
+/*settings switch ON & OFF word*/
+input:checked + .toggle-switch:after {
+    content: 'ON';
+    color: white;
+    display: flex;
+    justify-content: flex-start; 
+    position: absolute;
+    padding: 10px;
+} 
+
+.toggle-switch:after {
+    content: 'OFF';
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
 
 
 /*============Layout of Graphs=============*/
@@ -573,10 +675,25 @@ header {
         margin-bottom: 0px;
     }
 
-    .traffic, 
-    .social {
-        grid-column: 1 / span 2;
+    .social { /*social stats container*/
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        justify-items: center;
+        margin-left: auto;
+        margin-right: auto;
     }
+
+    .twitter_section,
+    .facebook_section,
+    .google_section { /*social stats sections*/
+        width: 30%;
+        padding-left: 10px;
+        margin-top: 20px;
+        align-self: center;
+        justify-self: center; 
+    }
+    
 
     .daily,
     .members,
@@ -598,3 +715,4 @@ header {
         width: 45vw;
     }
 }
+    

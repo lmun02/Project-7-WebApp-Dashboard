@@ -11,7 +11,7 @@ const send = document.getElementById("send");
 alertBanner.innerHTML =
     `
     <div class="alert-banner">
-    <p><strong>Alert</strong> You have <strong>6</strong> overdue tasks to complete</p>
+    <p><strong>Alert</strong> You have <strong>4</strong> overdue tasks to complete</p>
     <p class="alert-banner-close">x</p>
     </div>
     `
@@ -24,11 +24,15 @@ alertBanner.addEventListener('click', e => {
 
 /*---Line Graph Traffic Chart---*/ 
 let trafficData = {
-    labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
+    xLabels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
+    yLabels: ["500", "1000", "1500", "2000", "2500"],
     datasets: [{
         data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500],
         backgroundColor: 'rgba(116, 119, 191, .3)',
-        borderWidth: 1,
+        pointBackgroundColor: 'rgba(225, 225, 225, 1)',
+        borderWidth: 3,
+        borderColor: 'rgba(116,119,191,.3)',
+        lineTension: 0, //graph lines
     }]
 };
 
@@ -40,15 +44,25 @@ let trafficOptions = {
     scales: {
         yAxes: [{
             ticks: {
-                beginAtZero: true
-            }
-        }]
+                suggestedMin: 500,
+                suggestedMax: 2500,
+                fontSize: 12,
+                padding: 5
+            },    
+        }],
+
+        xAxes: [{
+            ticks: {
+                fontSize: 12,
+                padding: 5
+            },
+            
+        }],
     },
     legend: {
         display: false
     }
 };
-
 
 let trafficChart = new Chart(trafficCanvas, {
     type: 'line',
@@ -64,7 +78,8 @@ const dailyData = {
         label: '# of Hits',
         data: [75, 115, 175, 125, 225, 200, 200],
         backgroundColor:'#7477BF',
-        borderWidth: 1
+        borderWidth: 1,
+        
     }]
 };
 

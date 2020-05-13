@@ -90,15 +90,16 @@ let dailyChart = new Chart(dailyCanvas, {
 
 //Doughnut Chart Mobile Users
 const mobileData = {
-    labels: ["Desktop", "Tablet", "Phones"],
+    labels: ["Phones", "Tablets", "Desktop"],
     datasets: [{
         label: '# of Users',
-        data: [2000, 550, 500],
+        data: [500, 550, 2000],
         borderWidth: 0,
-        backgroundColor: [
-            '#7477BF',
+        backgroundColor: [ 
             '#78CF82',
-            '#52B6C8'
+            '#52B6C8',
+            '#7477BF'
+            
         ]
     }]
 }

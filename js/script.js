@@ -11,7 +11,7 @@ const send = document.getElementById("send");
 alertBanner.innerHTML =
     `
     <div class="alert-banner">
-    <p><strong>Alert</strong> You have <strong>4</strong> overdue tasks to complete</p>
+    <h4><strong>Alert!</strong> You have <strong>4</strong> overdue tasks to complete</h4>
     <p class="alert-banner-close">x</p>
     </div>
     `

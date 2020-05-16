@@ -256,7 +256,6 @@ header {
 
 
 /*=============Social Stats Section==================*/
-
 .social {
     border-bottom: solid 1px #dfdfdf;
 }
@@ -266,16 +265,6 @@ header {
     margin-bottom: 10px;
     margin-top: 10px;
 }
-
-.social svg {
-    background-color: #7477bf;
-    border-radius: 50%;
-}
-
-.social svg:hover { /*social stats circle hover*/
-    background-color: blue;   
-}
-
 
 
 .twitter_section,
@@ -291,18 +280,33 @@ header {
     margin-bottom: 20px;
 }
 
-.twitter-img,
-.facebook-img,
-.google-img { /*social stats images*/
-    padding: 10px;
-    width: 30%;
-}
-
-
 .twitter-icon,
 .facebook-icon,
 .google-icon { /*social stats path*/
     fill: white;
+}
+
+.twitter-img,
+.facebook-img,
+.google-img { /*social stats images*/
+    height: 60px;
+    width: 60px;
+    margin-top: 10px;
+    margin-bottom: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.social svg { /*social stats background*/
+    background-color: #7477bf;
+    border-radius: 30%;
+    height: 70px;
+    width: 70px;
+    padding: 10px;
+}
+
+.social svg:hover { /*social stats circle hover*/
+    background-color: blue;   
 }
 
 .social_text_twitter,
@@ -318,7 +322,7 @@ header {
     color: #7377BF;
     font-weight: bolder;
     margin: 0 ;
-    padding: auto;
+   
     text-align: left;
 }
 
@@ -327,9 +331,8 @@ header {
 #google-number { /*social stats number*/
     font-size: 3em;
     margin: 0 ;
-    padding-right: 10px;
+    
 }
-
 
 /*=============New Members Section==================*/
 
@@ -354,10 +357,15 @@ header {
     display: flex;
     flex-direction: row;
     padding: 5px;
-    margin-left:0;
-    margin-right: 0;
-    font-size: 10px;
+    align-items: center;
+    font-size: 11px;
+}
+
+.members_container_1,
+.members_container_2,
+.members_container_3 {
     border-bottom: solid 1px #dfdfdf;
+    
 }
 
 .members_container_1 img,
@@ -375,8 +383,7 @@ header {
     padding: 5px;
 }
 
-.members_text p { /*members name*/
-    margin: 0px;
+.members_text p { /*members name*/ 
     font-weight: bolder;
 }
 
@@ -397,7 +404,12 @@ header {
     flex-direction: row;   
     padding: 5px;
     align-items: center;
-    font-size: 12px;
+    font-size: 12px;   
+}
+
+.activity_container_1,
+.activity_container_2,
+.activity_container_3 {
     border-bottom: solid 1px #dfdfdf;
 }
 
@@ -427,7 +439,7 @@ header {
 .message h3 { /*message headline*/
     margin-left: 15px;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .widget_container { /*align container center*/
@@ -441,7 +453,7 @@ header {
     background: #fbfbfb;
     color: black;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .widget_container input::placeholder {
@@ -477,11 +489,11 @@ header {
 
 
 /*=============Settings==================*/
-
-.settings {
-    margin-bottom: 15px;
+.settings { /*message headline*/
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .settings h3 { /*settings headline*/
@@ -680,7 +692,7 @@ input:checked + .toggle-switch:after {
         flex-direction: row;
         justify-content: flex-end;
     }
-
+   
     .social { /*social stats container*/
         display: flex;
         flex-direction: row;
@@ -705,7 +717,22 @@ input:checked + .toggle-switch:after {
         grid-auto-columns: 1fr;
 
     }
+    
+    .members_container_1,
+    .members_container_2,
+    .members_container_3,
+    .members_container_4 { /*members container*/
+        height:92px;
+        width: 90%;
+    }
 
+    .activity_container_1,
+    .activity_container_2,
+    .activity_container_3,
+    .activity_container_4 {
+        height: 92px;
+        width: 90%;
+    }
     .member-info { /*member & activity grid*/
         display: grid;
         grid-auto-columns: 1fr;
@@ -743,5 +770,34 @@ input:checked + .toggle-switch:after {
     .widget_container_half {
         width: 45vw;
     }
-}
+
+    .settings {
+        margin: 0;
+    }
+
     
+}
+
+@media (min-width: 1024px) {
+    grid-container {
+        max-width: 1040px;
+    }
+    .members_container_1,
+    .members_container_2,
+    .members_container_3,
+    .members_container_4 { /*members container*/
+        height:85px;
+        width: auto;
+    }
+
+    .activity_container_1,
+    .activity_container_2,
+    .activity_container_3,
+    .activity_container_4 {
+        height:85px;
+        width: auto;
+    }
+    .settings {
+        margin: 0;
+    }
+}

@@ -61,21 +61,26 @@ header {
     border-radius: 50%;
 }
 
-.bell_icon {
+.header span:hover {
+    color: gold;
+}
+
+.bell_icon { /*bell,span,img,name*/
     display: flex;
     align-items: center;
     position: relative;
 }
 
-.bell_notification { /*bell icon*/
-    width: 30px;
-    height: auto;
-    margin-right: 10px; 
+.bell_icon .bell:hover { /*bell icon on hover*/
+    transform: translate(0,10px) rotate(45deg);
 }
 
-.bell img:hover {
-    fill: white;
+.bell_notification { /*bell icon w/span*/
+    width: 30px;
+    height: auto;
+    margin-right: 5px; 
 }
+
 
 .header img { /*profile image*/
     border-radius: 50%;
@@ -555,6 +560,7 @@ label {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-left: 10px;
 }
 
 .toggle-switch { /*setting switch button*/
@@ -603,8 +609,12 @@ label {
 .public_label { /*settings text label*/
     margin-left: 5px;
     position: relative;
-    font-weight: bolder;
+    font-weight: bold;
     top: 2px;
+}
+
+.public_label { /*alignment*/
+    padding-right: 35px;
 }
 
 /*settings switch ON & OFF word*/

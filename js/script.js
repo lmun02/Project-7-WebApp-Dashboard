@@ -11,16 +11,18 @@ const send = document.getElementById("send");
 alertBanner.innerHTML =
     `
     <div class="alert-banner">
-    <h4><strong>Alert!</strong> You have <strong>4</strong> overdue tasks to complete</h4>
+    <h4><strong>Alert!</strong> You have 7 overdue tasks to complete</h4>
     <p class="alert-banner-close">x</p>
     </div>
     `
 alertBanner.addEventListener('click', e => {
     const element = e.target;
     if (element.classList.contains("alert-banner-close")){
-        alert.style.display = "none"
+        alert.style.display = 'none';  
     }
 });
+
+
 
 /*---Line Graph Traffic Chart---*/ 
 let trafficData = {
@@ -136,11 +138,12 @@ let mobileChart = new Chart(mobileCanvas, {
     options: mobileOptions
 });
 
+
 /*---Message Section---*/ 
 send.addEventListener('click', () => {
-    //ensure user and message fields are filled out 
+    // ensure user and message fields are filled out
     if (user.value === "" && message.value === "") {
-        alert("Please fill out the user message fields before sending");
+        alert("Please fill out user and message fields before sending");
     } else if (user.value === "") {
         alert("Please fill out user field before sending");
     } else if (message.value === "") {

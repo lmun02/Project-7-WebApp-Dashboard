@@ -23,7 +23,6 @@ header {
     background-color: #7477bf;
 }
 
-
 /*============Creating Grid==========*/
 
 .grid_container {
@@ -36,7 +35,6 @@ header {
         "navigation"
         "main";
 }
-
 
 /*=========Header Layout Style===========*/
 
@@ -72,8 +70,13 @@ header {
     padding-right: 15px;
 }
 
+.bell_icon .bell{
+    transition: .3s all ease-in-out;
+}
+
 .bell_icon .bell:hover { /*bell icon on hover*/
-    transform: translate(0,10px) rotate(45deg);
+    transition: .1s all ease-in-out;
+    transform: translate(0,10px) rotate(45deg); 
 }
 
 .bell_notification { /*bell icon w/span*/
@@ -81,7 +84,6 @@ header {
     height: auto;
     margin-right: 5px; 
 }
-
 
 .header img { /*profile image*/
     border-radius: 50%;

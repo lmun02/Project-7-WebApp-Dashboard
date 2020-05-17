@@ -43,6 +43,12 @@ let trafficOptions = {
     animation: {
         duration: 0
     },
+    layout: {
+        padding: {
+            left: 10
+        }
+        
+    },
     scales: {
         yAxes: [{
             ticks: {

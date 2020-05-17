@@ -48,7 +48,7 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin: 0;
+    margin: 0px;
     padding: 0 10px;
 }
 
@@ -67,8 +67,9 @@ header {
 
 .bell_icon { /*bell,span,img,name*/
     display: flex;
-    align-items: center;
+    align-items:center;
     position: relative;
+    padding-right: 15px;
 }
 
 .bell_icon .bell:hover { /*bell icon on hover*/
@@ -168,9 +169,9 @@ header {
 
 /*====Alert=====*/
 .alert-banner { /*JS alert*/
-    margin: 0 15px;
+    margin: 0 10px;
     margin-top: 10px;
-    padding: 0 20px;
+    padding: 0 10px;
     background-color: #7477bf;
     color: white;
     border-radius: 5px;
@@ -326,8 +327,7 @@ header {
 #google-bold { /*social stats text*/
     color: #7377BF;
     font-weight: bolder;
-    margin: 0 ;
-   
+    margin: 0 ; 
     text-align: left;
 }
 
@@ -335,8 +335,7 @@ header {
 #facebook-number,
 #google-number { /*social stats number*/
     font-size: 3em;
-    margin: 0 ;
-    
+    margin: 0 ;   
 }
 
 /*=============New Members Section==================*/
@@ -697,6 +696,11 @@ input:checked + .toggle-switch:after {
         margin-bottom: 0px;
     }
 
+    .alert-banner { /*JS alert*/
+        margin: 0 auto 0 5px;
+       
+    }
+
    .traffic_nav{ /*traffic nav layout*/
         display: flex;
         flex-direction: row;
@@ -716,12 +720,27 @@ input:checked + .toggle-switch:after {
     .facebook_section,
     .google_section { /*social stats sections*/
         width: 30%;
-        padding-left: 10px;
+        padding-left: 0px;
         margin-top: 20px;
         align-self: center;
         justify-self: center; 
     }
     
+    #twitter-number,
+    #facebook-number,
+    #google-number { /*social stats number*/
+        font-size: 2em;
+        margin: 0 ;   
+    }
+
+    .social svg { /*social stats background*/
+        background-color: #7477bf;
+        border-radius: 30%;
+        height: 55px;
+        width: 65px;
+        padding: 10px;
+    }
+
     .half-size-charts{ /*daily & mobile grid*/
         display: grid;
         grid-auto-columns: 1fr;
@@ -784,14 +803,34 @@ input:checked + .toggle-switch:after {
     .settings {
         margin: 0;
     }
-
-    
+   
 }
 
 @media (min-width: 1024px) {
     grid-container {
         max-width: 1040px;
     }
+
+    .alert-banner { /*JS alert*/
+        margin: 0 10px;
+       
+    }
+
+    #twitter-number,
+    #facebook-number,
+    #google-number { /*social stats number*/
+        font-size: 3em;
+        margin: 0 ;   
+    }
+
+    .social svg { /*social stats background*/
+        background-color: #7477bf;
+        border-radius: 30%;
+        height: 70px;
+        width: 70px;
+        padding: 10px;
+    }
+
     .members_container_1,
     .members_container_2,
     .members_container_3,
